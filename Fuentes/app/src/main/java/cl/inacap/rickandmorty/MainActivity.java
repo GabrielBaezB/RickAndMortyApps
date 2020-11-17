@@ -23,6 +23,7 @@ public class MainActivity extends AppCompatActivity {
         this.vp = findViewById(R.id.view_pager);
         this.tpa = new TabsNavPageAdapter(getSupportFragmentManager());
         this.vp.setAdapter(this.tpa);
+        this.tl.setupWithViewPager(vp);
         this.tl.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
             @Override
             public void onTabSelected(TabLayout.Tab tab) {

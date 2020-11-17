@@ -1,6 +1,7 @@
 package cl.inacap.rickandmorty.adapters;
 
 import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentStatePagerAdapter;
@@ -10,6 +11,15 @@ import cl.inacap.rickandmorty.UbicacionesFragment;
 
 public class TabsNavPageAdapter extends FragmentStatePagerAdapter {
 
+    @Nullable
+    @Override
+    public CharSequence getPageTitle(int position) {
+        switch (position){
+            case 0: return "Personajes";
+            case 1: return "Ubicaciones";
+            default: return null;
+        }
+    }
 
     public TabsNavPageAdapter(@NonNull FragmentManager fm) {
         super(fm, BEHAVIOR_RESUME_ONLY_CURRENT_FRAGMENT);
