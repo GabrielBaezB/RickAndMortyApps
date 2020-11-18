@@ -6,9 +6,9 @@
     tools:context=".UbicacionesFragment">
 
     <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <ListView
+        android:id="@+id/lista_locations"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="Yo soy ubicaciones" />
+        android:layout_height="wrap_content"/>
 
 </FrameLayout>
